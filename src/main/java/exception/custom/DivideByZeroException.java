@@ -1,4 +1,4 @@
-package com.eazybytes.exception.custom;
+package exception.custom;
 
 public class DivideByZeroException extends RuntimeException {
 

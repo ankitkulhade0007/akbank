@@ -6,9 +6,9 @@ public class BoxingDemo {
         int num = 16;
 
         // Approach 1 - With the help of Constructor
-        Integer integer = new Integer(num);
+        /*Integer integer = new Integer(num);
         Double doubleObj = new Double(3.14);
-        Long longObj = new Long("95657");
+        Long longObj = new Long("95657");*/
 
         // Approach 2 - With the help of valueOf()
         Integer integer1 = Integer.valueOf(num);
