@@ -1,4 +1,4 @@
-package com.eazybytes.exception;
+package exception;
 
 import java.util.Scanner;
 
@@ -10,7 +10,7 @@ public class ThrowDemo {
         String num1 = scanner.next();
         System.out.println("Please enter the denominator value");
         String num2 = scanner.next();
-        Division division = new Division();
+        com.eazybytes.exception.Division division = new com.eazybytes.exception.Division();
         if(num2.equals("0")) {
             throw new ArithmeticException("Division by zero");
         }

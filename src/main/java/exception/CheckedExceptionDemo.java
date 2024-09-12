@@ -1,4 +1,4 @@
-package com.eazybytes.exception;
+package exception;
 
 import java.io.*;
 

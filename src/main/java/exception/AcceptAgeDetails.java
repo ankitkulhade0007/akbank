@@ -1,4 +1,4 @@
-package com.eazybytes.exception;
+package exception;
 
 import com.eazybytes.exception.custom.InvalidAgeException;
 

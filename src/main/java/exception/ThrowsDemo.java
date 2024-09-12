@@ -1,9 +1,9 @@
-package com.eazybytes.exception;
+package exception;
 
 public class ThrowsDemo {
 
     public static void main(String[] args) {
-        Division division = new Division();
+        com.eazybytes.exception.Division division = new com.eazybytes.exception.Division();
         try{
             double ouput = division.divide("4", "2");
             System.out.println(ouput);
