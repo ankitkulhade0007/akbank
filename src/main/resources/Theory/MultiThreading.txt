@@ -1,0 +1,13 @@
+Reentrant
+    1- lock
+    2- trylock
+    3- unlock
+    4-deadlock prevention
+    5- lockIntruppetbly
+    6- Fairness
+
+Synchronized disadvantage
+1- Fairness is not garrenty
+2- Indefinitly blocking
+3- can not interrupt
+4- read/write locking

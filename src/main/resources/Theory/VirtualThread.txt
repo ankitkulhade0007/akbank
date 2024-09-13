@@ -1,0 +1,17 @@
+What is a Virtual Thread?
+Like a platform thread, a virtual thread is also an instance of java.lang.Thread.
+However, a virtual thread isn't tied to a specific OS thread. A virtual thread still runs code on an OS thread.
+However, when code running in a virtual thread calls a blocking I/O operation,
+the Java runtime suspends the virtual thread until it can be resumed.
+The OS thread associated with the suspended virtual thread is now free to perform operations for other virtual threads.
+
+
+Netflix blog-
+"A virtual thread is not mapped 1:1 to a dedicated OS-level thread.
+Rather we can think of it as a task that is scheduled to a fork-join thread pool.
+When a virtual thread enters a blocking call like waiting for a Future it relinquishes the OS thread
+it occupies and simply remains in memory until it is ready to resume. In the meantime the OS thread can be reassigned to execute other
+ VTs in the same fork-join pool. This allows us to multiplex a lot of VTs to just a handful of underlying OS threads.
+
+ In JVM terminology, the underlying OS thread is referred to as the “carrier thread” to which a virtual thread can be “mounted”
+ while it executes and “unmounted” while it waits."
