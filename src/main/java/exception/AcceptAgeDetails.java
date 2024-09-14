@@ -1,6 +1,6 @@
 package exception;
 
-import com.eazybytes.exception.custom.InvalidAgeException;
+import exception.custom.InvalidAgeException;
 
 import java.util.Scanner;
 

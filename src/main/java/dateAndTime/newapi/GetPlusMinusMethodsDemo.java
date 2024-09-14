@@ -8,6 +8,9 @@ import java.time.Month;
 public class GetPlusMinusMethodsDemo {
 
     public static void main(String[] args) {
+        getAndPlusMethodsExample();
+    }
+    public  static void getAndPlusMethodsExample(){
         LocalDate localDate = LocalDate.of(2015, 3 , 18);
         int year = localDate.getYear(); // 2015
         Month month = localDate.getMonth(); // MARCH

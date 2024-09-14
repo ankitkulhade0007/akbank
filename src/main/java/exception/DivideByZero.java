@@ -1,6 +1,6 @@
 package exception;
 
-import com.eazybytes.exception.custom.DivideByZeroException;
+import exception.custom.DivideByZeroException;
 
 import java.util.Scanner;
 
