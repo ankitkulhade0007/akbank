@@ -4,6 +4,7 @@ import java.time.DayOfWeek;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.Month;
+import java.time.temporal.TemporalField;
 
 public class GetPlusMinusMethodsDemo {
 
@@ -19,6 +20,18 @@ public class GetPlusMinusMethodsDemo {
 
         LocalDateTime localDateTime = LocalDateTime.now();
         int hour = localDateTime.getHour();
+        localDateTime.getMinute();
+        localDateTime.getSecond();
+        localDateTime.getNano();
+
+        localDateTime.getYear();
+        localDateTime.getMonth();
+        localDateTime.getDayOfYear();
+        localDateTime.getDayOfMonth();
+        localDateTime.getDayOfWeek();
+        localDateTime.getMonthValue();
+
+        localDateTime.getChronology();
 
         LocalDate ld1 = localDate.plusDays(6); // 2015-03-24
         LocalDate ld2 = localDate.plusMonths(6); // 2015-09-18

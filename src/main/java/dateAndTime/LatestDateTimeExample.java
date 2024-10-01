@@ -1,6 +1,8 @@
 package dateAndTime;
 
 import java.time.*;
+import java.time.temporal.TemporalAdjuster;
+import java.time.temporal.TemporalAdjusters;
 
 import static dateAndTime.newapi.FromAndWithMethodsDemo.formAndWithExample;
 import static dateAndTime.newapi.GetPlusMinusMethodsDemo.getAndPlusMethodsExample;
@@ -41,6 +43,40 @@ public class LatestDateTimeExample {
         getAndPlusMethodsExample();
 
         scenarioTest();
+
+    // Which class would you use to store your birthday in years, months, days, seconds, and nanoseconds?
+        LocalDateTime birthday = LocalDateTime.of(1994, 12, 17, 15, 30, 45, 123456789);
+
+        LocalDate birthDate = LocalDate.of(1994, 12, 17);
+        LocalDate currentDate = LocalDate.now();
+        Period period = Period.between(birthDate, currentDate);
+
+        System.out.println("My Current Age is " + period);
+        System.out.println("My Current Age is " + birthday);
+
+    //    Given a random date, how would you find the date of the previous Thursday?
+
+        LocalDate randomDate = LocalDate.now();
+        DayOfWeek dayOfWeek = randomDate.getDayOfWeek();
+        LocalDate thousdayDate = switch (dayOfWeek){
+            case MONDAY ->  randomDate.minusDays(4);
+            case TUESDAY -> randomDate.minusDays(5);
+            case WEDNESDAY -> randomDate.minusDays(6);
+            case THURSDAY -> randomDate.minusDays(7);
+            case FRIDAY -> randomDate.minusDays(1);
+            case SATURDAY -> randomDate.minusDays(2);
+            case SUNDAY -> randomDate.minusDays(3);
+        };
+        System.out.println("previous Thursday Date :- " + thousdayDate);
+
+        System.out.printf("Current date is: %s%n", randomDate);
+        System.out.printf("The previous Thursday is: %s%n",
+                randomDate.with(TemporalAdjusters.previous(DayOfWeek.THURSDAY)));
+        System.out.printf("randomDate.withYear(1) is: %s%n",randomDate.withYear(1));
+        System.out.printf("randomDate.withMonth(1) is: %s%n",randomDate.withMonth(1));
+        System.out.printf("randomDate.withDayOfYear(10) is: %s%n",randomDate.withDayOfYear(10));
+        System.out.printf("randomDate.withDayOfYear(100) is: %s%n",randomDate.withDayOfYear(100));
+        System.out.printf("randomDate.withDayOfMonth(29) is: %s%n",randomDate.withDayOfMonth(10));
 
     }
 

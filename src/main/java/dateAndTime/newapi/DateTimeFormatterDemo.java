@@ -34,9 +34,22 @@ public class DateTimeFormatterDemo {
         DateTimeFormatter germanFormatter = DateTimeFormatter.ofPattern("d. MMMM yyyy", Locale.GERMAN);
         String formattedDateGermany = germanFormatter.format(localDate);
         System.out.println(formattedDateGermany);
+    }
 
+// 1) Inside the formatDateTime method, write a logic to convert any given LocalDateTime value into "dd/MM/yyyy h:mm a" format and return the String value
+    public static String formatDateTime(LocalDateTime localDateTime) {
 
+        DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("dd/MM/yyyy h:mm a");
+        return localDateTime.format(dateTimeFormatter);
+    }
+
+// 2) Inside the parseDateTime method, write a logic to convert any given String representation of LocalDateTime value with a format of "dd/MM/yyyy HH:mm:ss" into the  LocalDateTime object and return the same.
+    public static LocalDateTime parseDateTime(String dateTimeString) {
+
+        DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss");
+        return LocalDateTime.parse(dateTimeString, dateTimeFormatter);
 
     }
+
 
 }

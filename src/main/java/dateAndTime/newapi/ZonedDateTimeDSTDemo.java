@@ -20,4 +20,21 @@ public class ZonedDateTimeDSTDemo {
         // Arrival (EST): 2024-03-10T05:00-04:00[America/New_York]
     }
 
+    public static void test() {
+        ZonedDateTime londonStartTime, londonEndTime, newYorkStartTime, newYorkEndTime;
+
+        // Assign the londonStartTime as Oct 15, 2024 14:00 with the timezone as Europe/London
+        londonStartTime = ZonedDateTime.of(2024, 10, 15, 14, 0, 0, 0, ZoneId.of("Europe/London"));
+        londonEndTime = londonStartTime.plusHours(2);
+
+        newYorkStartTime = londonStartTime.withZoneSameInstant(ZoneId.of("America/New_York"));
+        newYorkEndTime = londonEndTime.withZoneSameInstant(ZoneId.of("America/New_York"));
+
+
+        System.out.println("Conference Call Start Time (London): " + londonStartTime);
+        System.out.println("Conference Call End Time (London): " + londonEndTime);
+        System.out.println("Conference Call Start Time (New York): " + newYorkStartTime);
+        System.out.println("Conference Call End Time (New York): " + newYorkEndTime);
+    }
+
 }
