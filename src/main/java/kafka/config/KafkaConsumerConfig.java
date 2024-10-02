@@ -2,6 +2,7 @@ package kafka.config;
 
 
 import constant.AkBankConstant;
+import org.springframework.context.annotation.Configuration;
 import org.apache.kafka.clients.consumer.ConsumerConfig;
 import org.apache.kafka.common.serialization.StringDeserializer;
 import org.springframework.context.annotation.Bean;
@@ -44,5 +45,4 @@ public class KafkaConsumerConfig {
         factory.setConsumerFactory(consumerFactory());
         return factory;
     }
-
 }

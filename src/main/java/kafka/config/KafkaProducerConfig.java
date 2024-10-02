@@ -17,8 +17,6 @@ import java.util.Map;
 @Configuration
 public class KafkaProducerConfig {
 
-
-
     @Bean
     public NewTopic createTopic(){
         return new NewTopic(AkBankConstant.TOPIC_NAME_1, 3, (short)1);
